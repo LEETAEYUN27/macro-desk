@@ -1,0 +1,25 @@
+name: 초기 소스 풀기 (1회용)
+
+# 웹 업로드는 폴더 구조를 유지하지 못하므로 bundle.zip 으로 올린 뒤 여기서 풀어 커밋한다.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: bundle.zip 풀기
+        run: |
+          if [ ! -f bundle.zip ]; then echo "bundle.zip 없음 - 건너뜀"; exit 0; fi
+          unzip -o -q bundle.zip -d .
+          git rm -q bundle.zip
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "소스 코드 풀기 (bundle.zip)"
+          git push
