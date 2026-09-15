@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: macro-console-api
+    runtime: python
+    rootDir: backend
+    plan: free          # 운영 시 starter($7/월) 권장 : 무료는 15분 무요청 시 정지
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: PAYLOAD_URL
+        value: https://leetaeyun27.github.io/macro-console/payload.json
+      - key: CORS_ORIGINS
+        value: https://example.com,https://www.example.com
+      - key: DART_API_KEY
+        sync: false
+      - key: REFRESH_TOKEN
+        generateValue: true
