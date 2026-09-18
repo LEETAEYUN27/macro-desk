@@ -6,7 +6,9 @@ name: 웹사이트 일일 빌드
 #  3) Cloudflare Pages 가 site 브랜치 변경을 감지해 자동 배포 (비밀키 불필요)
 on:
   schedule:
-    - cron: "40 22 * * *"
+    # 2시간마다 재빌드 (하루 12회). 이벤트 시계·금리 확률이 하루 종일 갱신된다.
+    # Cloudflare Pages 무료 요금제의 월 500회 빌드 한도 안에 들어가는 최대 주기.
+    - cron: "40 */2 * * *"
   workflow_dispatch:
   push:
     branches: [main]
