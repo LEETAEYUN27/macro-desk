@@ -14,6 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     u("/", 1.0),
     u("/report/", 0.9),
+    u("/calendar/", 0.9),
     u("/indicators/", 0.8),
     ...indicators.map((i) => u(`/indicators/${i.slug}/`, 0.8)),
     ...MARKET_SLUGS.map((s) => u(`/markets/${s}/`, 0.7)),

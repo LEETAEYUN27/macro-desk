@@ -15,6 +15,7 @@ export const SITE = {
 export const NAV = [
   { href: "/", label: "대시보드" },
   { href: "/report/", label: "오늘의 브리핑" },
+  { href: "/calendar/", label: "경제 일정" },
   { href: "/indicators/", label: "지표 해설" },
   { href: "/markets/indices/", label: "주요 지수" },
   { href: "/markets/commodities/", label: "원자재" },

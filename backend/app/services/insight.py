@@ -30,7 +30,7 @@ def _chg_word(v):
     return "큰 폭 하락"
 
 
-def build_insight(p: dict) -> dict:
+def build_insight(p: dict, ev: dict | None = None) -> dict:
     st = p["stability"]
     comps = sorted(st["components"], key=lambda c: c["score"])
     weak, strong = comps[0], comps[-1]
@@ -68,14 +68,14 @@ def build_insight(p: dict) -> dict:
         p2 += f" VIX 는 {v:.1f}로 {zone} 구간입니다."
 
     # 3. 금리
-    ro = p.get("rate_odds") or {}
+    ro = (ev or {}).get("rate_odds") or p.get("rate_odds") or {}
     outs = ro.get("outcomes") or []
     top = max(outs, key=lambda o: o["prob"]) if outs else None
     metrics = {m["name"]: m["value"] for m in st["metrics"]}
     p3 = (f"연방기금 실효금리는 {metrics.get('연방기금 실효금리', '-')}, 미 10년물은 {metrics.get('미 10년물', '-')}, "
           f"10년-3개월 금리차는 {metrics.get('장단기 금리차 10Y−3M', '-')} 입니다. ")
     if top:
-        p3 += (f"연방기금 선물 가격 기준으로 {ro.get('meeting', '다음 FOMC')}에서 '{top['label']}' 가능성이 "
+        p3 += (f"연방기금 선물 가격 기준으로 다음 FOMC({ro.get('meeting', '-')})에서 '{top['label']}' 가능성이 "
                f"{top['prob']}%로 가장 높게 반영되어 있습니다(CME FedWatch 공식 수치가 아닌 자체 환산치).")
 
     # 4. 환율·원자재
@@ -96,6 +96,14 @@ def build_insight(p: dict) -> dict:
         p5 = (f"S&P 500 시총가중과 동일가중의 12개월 수익률 격차는 {c['last']:+.1f}%p(역사적 백분위 {c['pctile']:.0f}%)이며, "
               f"최근 3개월 {_f(c.get('chg_3m'), 1)}%p 변해 '{c['trend']}' 흐름입니다.")
 
+    # 임박 이벤트 한 줄
+    p6 = ""
+    ups = (ev or {}).get("upcoming") or []
+    if ups:
+        nxt = ups[0]
+        p6 = (f"다음 예정 이벤트는 {nxt['date']} {nxt['name']}이며 남은 기간은 {max(nxt.get('days_left', 0), 0)}일입니다. "
+              f"{nxt['why']}")
+
     mv = movers(p)
     bullets = []
     if mv["up"]:
@@ -107,7 +115,7 @@ def build_insight(p: dict) -> dict:
 
     return {
         "headline": headline,
-        "paragraphs": [x for x in (p1, p2, p3, p4, p5) if x],
+        "paragraphs": [x for x in (p1, p2, p3, p4, p5, p6) if x],
         "bullets": bullets,
         "method": "공개 지표를 정해진 규칙으로 문장화한 자동 해설입니다. 투자 권유가 아니며 미래를 예측하지 않습니다.",
     }

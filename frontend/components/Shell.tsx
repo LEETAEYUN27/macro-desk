@@ -28,7 +28,7 @@ export default function Shell({ children }: { children: React.ReactNode }) {
           <nav aria-label="주 메뉴" className="flex flex-col gap-0.5">
             {NAV.map((n, i) => (
               <div key={n.href}>
-                {i === 3 && <div className="mb-1 mt-4 px-3 text-[11px] font-semibold uppercase tracking-wider text-slate-400">시장</div>}
+                {i === 4 && <div className="mb-1 mt-4 px-3 text-[11px] font-semibold uppercase tracking-wider text-slate-400">시장</div>}
                 <Link href={n.href} className="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">
                   {n.label}
                 </Link>

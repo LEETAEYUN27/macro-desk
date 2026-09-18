@@ -1,4 +1,4 @@
-import type { Dashboard, IndicatorDetail, MarketGroup, Report } from "./types";
+import type { Calendar, Dashboard, IndicatorDetail, MarketGroup, Report } from "./types";
 
 const BASE = (process.env.API_BASE_URL || "http://localhost:8000").replace(/\/$/, "");
 // 백엔드 캐시(30분)보다 약간 길게 : 페이지는 1시간마다 백그라운드 재생성(ISR)
@@ -29,4 +29,5 @@ export const api = {
   indicator: (slug: string) => get<IndicatorDetail>(`/api/indicators/${slug}`),
   market: (slug: string) => get<MarketGroup>(`/api/markets/${slug}`),
   report: () => get<Report>("/api/report/daily"),
+  calendar: () => get<Calendar>("/api/events"),
 };

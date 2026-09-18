@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AdSlot from "@/components/AdSlot";
 import { Gauge, LineChart, ScoreBar } from "@/components/charts";
+import EventTimeline from "@/components/EventTimeline";
 import MarketTable from "@/components/MarketTable";
 import { api } from "@/lib/api";
 import { asofKST, pct, tone } from "@/lib/format";
@@ -120,6 +121,19 @@ export default async function Home() {
                 <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1.5 text-[13px] sm:grid-cols-3">
                   {ro.path.map((p) => (<div key={p.label}><dt className="text-xs text-slate-500">{p.label}</dt><dd className="tnum font-semibold">{p.v}</dd></div>))}
                 </dl>
+                {d.calendar.fomc_path.length > 1 && (
+                  <div className="mt-4 border-t border-slate-100 pt-3">
+                    <div className="mb-1.5 text-xs font-medium text-slate-500">이후 회의까지 누적 반영폭</div>
+                    <div className="flex flex-wrap gap-x-5 gap-y-1 text-[13px]">
+                      {d.calendar.fomc_path.slice(1).map((f) => (
+                        <span key={f.date}>
+                          <span className="text-slate-500">{f.date}</span>{" "}
+                          <span className="tnum font-semibold">{f.cum_bp !== null ? `${f.cum_bp > 0 ? "+" : ""}${f.cum_bp}bp` : "-"}</span>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 <p className="mt-3 text-xs leading-5 text-slate-500">{ro.method}</p>
               </div>
             </div>
@@ -172,18 +186,8 @@ export default async function Home() {
           </section>
         ))}
 
-        {/* 6. 일정 */}
-        <section className="card">
-          <div className="card-h"><h2 className="card-t">주요 일정</h2></div>
-          <ul className="divide-y divide-slate-50">
-            {d.events.map((e) => (
-              <li key={e.name} className="grid gap-1 px-4 py-2.5 text-sm sm:grid-cols-[120px_1fr]">
-                <span className="tnum font-medium text-brand-700">{e.date}</span>
-                <span><span className="font-medium">{e.name}</span><span className="block text-xs text-slate-500">{e.why}</span></span>
-              </li>
-            ))}
-          </ul>
-        </section>
+        {/* 6. 이벤트 타임라인 */}
+        <EventTimeline upcoming={d.calendar.upcoming} past={d.calendar.past} note={d.calendar.note} />
 
         {/* 7. 13F */}
         <section className="card">

@@ -1,0 +1,419 @@
+[
+ {
+  "date": "2026-09-04",
+  "time_kst": "21:30",
+  "name": "미국 고용보고서 (8월분)",
+  "kind": "jobs",
+  "region": "US",
+  "impact": "high",
+  "why": "고용 둔화 여부 확인",
+  "source": "BLS",
+  "ref_month": "2026-08",
+  "result": {
+   "type": "fred_last",
+   "id": "UNRATE",
+   "label": "실업률",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-09-11",
+  "time_kst": "21:30",
+  "name": "미국 소비자물가 CPI (8월분)",
+  "kind": "cpi",
+  "region": "US",
+  "impact": "high",
+  "why": "근원 물가와 목표 2%의 이격 확인",
+  "source": "BLS",
+  "ref_month": "2026-08",
+  "result": {
+   "type": "fred_yoy",
+   "id": "CPILFESL",
+   "label": "근원 CPI 전년비",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-09-16",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (9월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표(경제전망)를 함께 갱신하는 회의입니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ },
+ {
+  "date": "2026-09-30",
+  "time_kst": "21:30",
+  "name": "미국 개인소비지출 PCE 물가 (8월분)",
+  "kind": "pce",
+  "region": "US",
+  "impact": "mid",
+  "why": "연준이 공식 목표로 삼는 물가 지표입니다.",
+  "source": "BEA",
+  "ref_month": "2026-08",
+  "result": {
+   "type": "fred_yoy",
+   "id": "PCEPILFE",
+   "label": "근원 PCE 전년비",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-10-02",
+  "time_kst": "21:30",
+  "name": "미국 고용보고서 (9월분)",
+  "kind": "jobs",
+  "region": "US",
+  "impact": "high",
+  "why": "고용이 꺾이면 금리 인상 명분이 약해집니다. Sahm 룰 감시 지점입니다.",
+  "source": "BLS",
+  "ref_month": "2026-09",
+  "result": {
+   "type": "fred_last",
+   "id": "UNRATE",
+   "label": "실업률",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-10-14",
+  "time_kst": "21:30",
+  "name": "미국 소비자물가 CPI (9월분)",
+  "kind": "cpi",
+  "region": "US",
+  "impact": "high",
+  "why": "근원 물가가 연준 목표 2%에서 얼마나 벌어져 있는지가 금리 경로를 좌우합니다.",
+  "source": "BLS",
+  "ref_month": "2026-09",
+  "result": {
+   "type": "fred_yoy",
+   "id": "CPILFESL",
+   "label": "근원 CPI 전년비",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-10-22",
+  "time_kst": "10:00",
+  "name": "한국은행 금융통화위원회",
+  "kind": "bok",
+  "region": "KR",
+  "impact": "high",
+  "why": "한국 기준금리 결정. 한미 금리차와 원/달러 환율에 직접 영향을 줍니다.",
+  "source": "한국은행",
+  "result": null
+ },
+ {
+  "date": "2026-10-28",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (10월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표 없이 금리만 결정하는 중간 회의입니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ },
+ {
+  "date": "2026-10-29",
+  "time_kst": "21:30",
+  "name": "미국 GDP 2026년 3분기 속보치",
+  "kind": "gdp",
+  "region": "US",
+  "impact": "mid",
+  "why": "성장률 둔화 여부를 확인하는 지표입니다.",
+  "source": "BEA",
+  "result": {
+   "type": "fred_last",
+   "id": "A191RL1Q225SBEA",
+   "label": "실질 GDP 성장률(연율)",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-10-29",
+  "time_kst": "21:30",
+  "name": "미국 개인소비지출 PCE 물가 (9월분)",
+  "kind": "pce",
+  "region": "US",
+  "impact": "mid",
+  "why": "연준이 공식 목표로 삼는 물가 지표입니다.",
+  "source": "BEA",
+  "ref_month": "2026-09",
+  "result": {
+   "type": "fred_yoy",
+   "id": "PCEPILFE",
+   "label": "근원 PCE 전년비",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-11-06",
+  "time_kst": "21:30",
+  "name": "미국 고용보고서 (10월분)",
+  "kind": "jobs",
+  "region": "US",
+  "impact": "high",
+  "why": "고용이 꺾이면 금리 인상 명분이 약해집니다. Sahm 룰 감시 지점입니다.",
+  "source": "BLS",
+  "ref_month": "2026-10",
+  "result": {
+   "type": "fred_last",
+   "id": "UNRATE",
+   "label": "실업률",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-11-10",
+  "time_kst": "21:30",
+  "name": "미국 소비자물가 CPI (10월분)",
+  "kind": "cpi",
+  "region": "US",
+  "impact": "high",
+  "why": "근원 물가가 연준 목표 2%에서 얼마나 벌어져 있는지가 금리 경로를 좌우합니다.",
+  "source": "BLS",
+  "ref_month": "2026-10",
+  "result": {
+   "type": "fred_yoy",
+   "id": "CPILFESL",
+   "label": "근원 CPI 전년비",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "time_kst": "21:30",
+  "name": "미국 GDP 2026년 3분기 잠정치",
+  "kind": "gdp",
+  "region": "US",
+  "impact": "mid",
+  "why": "성장률 둔화 여부를 확인하는 지표입니다.",
+  "source": "BEA",
+  "result": {
+   "type": "fred_last",
+   "id": "A191RL1Q225SBEA",
+   "label": "실질 GDP 성장률(연율)",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "time_kst": "21:30",
+  "name": "미국 개인소비지출 PCE 물가 (10월분)",
+  "kind": "pce",
+  "region": "US",
+  "impact": "mid",
+  "why": "연준이 공식 목표로 삼는 물가 지표입니다.",
+  "source": "BEA",
+  "ref_month": "2026-10",
+  "result": {
+   "type": "fred_yoy",
+   "id": "PCEPILFE",
+   "label": "근원 PCE 전년비",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-11-26",
+  "time_kst": "10:00",
+  "name": "한국은행 금융통화위원회",
+  "kind": "bok",
+  "region": "KR",
+  "impact": "high",
+  "why": "한국 기준금리 결정. 한미 금리차와 원/달러 환율에 직접 영향을 줍니다.",
+  "source": "한국은행",
+  "result": null
+ },
+ {
+  "date": "2026-12-04",
+  "time_kst": "21:30",
+  "name": "미국 고용보고서 (11월분)",
+  "kind": "jobs",
+  "region": "US",
+  "impact": "high",
+  "why": "고용이 꺾이면 금리 인상 명분이 약해집니다. Sahm 룰 감시 지점입니다.",
+  "source": "BLS",
+  "ref_month": "2026-11",
+  "result": {
+   "type": "fred_last",
+   "id": "UNRATE",
+   "label": "실업률",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-12-09",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (12월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표(경제전망)를 함께 갱신하는 회의로 향후 금리 경로가 제시됩니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ },
+ {
+  "date": "2026-12-10",
+  "time_kst": "21:30",
+  "name": "미국 소비자물가 CPI (11월분)",
+  "kind": "cpi",
+  "region": "US",
+  "impact": "high",
+  "why": "근원 물가가 연준 목표 2%에서 얼마나 벌어져 있는지가 금리 경로를 좌우합니다.",
+  "source": "BLS",
+  "ref_month": "2026-11",
+  "result": {
+   "type": "fred_yoy",
+   "id": "CPILFESL",
+   "label": "근원 CPI 전년비",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-12-23",
+  "time_kst": "21:30",
+  "name": "미국 GDP 2026년 3분기 확정치",
+  "kind": "gdp",
+  "region": "US",
+  "impact": "mid",
+  "why": "성장률 둔화 여부를 확인하는 지표입니다.",
+  "source": "BEA",
+  "result": {
+   "type": "fred_last",
+   "id": "A191RL1Q225SBEA",
+   "label": "실질 GDP 성장률(연율)",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2026-12-23",
+  "time_kst": "21:30",
+  "name": "미국 개인소비지출 PCE 물가 (11월분)",
+  "kind": "pce",
+  "region": "US",
+  "impact": "mid",
+  "why": "연준이 공식 목표로 삼는 물가 지표입니다.",
+  "source": "BEA",
+  "ref_month": "2026-11",
+  "result": {
+   "type": "fred_yoy",
+   "id": "PCEPILFE",
+   "label": "근원 PCE 전년비",
+   "unit": "%"
+  }
+ },
+ {
+  "date": "2027-01-27",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (1월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표 없이 금리만 결정하는 중간 회의입니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ },
+ {
+  "date": "2027-03-17",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (3월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표(경제전망)를 함께 갱신하는 회의로 향후 금리 경로가 제시됩니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ },
+ {
+  "date": "2027-04-28",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (4월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표 없이 금리만 결정하는 중간 회의입니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ },
+ {
+  "date": "2027-06-09",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (6월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표(경제전망)를 함께 갱신하는 회의로 향후 금리 경로가 제시됩니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ },
+ {
+  "date": "2027-07-28",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (7월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표 없이 금리만 결정하는 중간 회의입니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ },
+ {
+  "date": "2027-09-15",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (9월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표(경제전망)를 함께 갱신하는 회의로 향후 금리 경로가 제시됩니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ },
+ {
+  "date": "2027-10-27",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (10월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표 없이 금리만 결정하는 중간 회의입니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ },
+ {
+  "date": "2027-12-08",
+  "time_kst": "익일 03:00",
+  "name": "FOMC 통화정책회의 (12월)",
+  "kind": "fomc",
+  "region": "US",
+  "impact": "high",
+  "why": "기준금리 결정. 점도표(경제전망)를 함께 갱신하는 회의로 향후 금리 경로가 제시됩니다.",
+  "source": "Federal Reserve",
+  "result": {
+   "type": "effr_change"
+  }
+ }
+]

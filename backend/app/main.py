@@ -12,6 +12,7 @@ from fastapi.middleware.gzip import GZipMiddleware
 from app.cache import cache
 from app.config import get_settings
 from app.services import indicators as ind
+from app.services import events as events_svc
 from app.services.insight import build_insight
 from app.services.transform import (GROUP_LABELS, GROUP_SLUGS, SLUG_TO_GROUP, movers, slim_concentration,
                                     slim_item)
@@ -50,16 +51,34 @@ async def health():
     return {"ok": True}
 
 
+def _effr(st: dict) -> float:
+    for m in st["metrics"]:
+        if "실효금리" in m["name"]:
+            try:
+                return float(m["value"].rstrip("%"))
+            except ValueError:
+                break
+    return 0.0
+
+
+@app.get("/api/events")
+async def events():
+    p = await get_payload()
+    return await events_svc.build(_effr(p["stability"]), p["asof"], upcoming_n=12, past_n=6)
+
+
 @app.get("/api/dashboard")
 async def dashboard():
     p = await get_payload()
     st = p["stability"]
+    ev = await events_svc.build(_effr(st), p["asof"])
     return {
         "asof": p["asof"],
         "fallback": bool(p.get("_fallback")),
         "stability": {k: st[k] for k in ("score", "label", "components", "metrics", "method")},
-        "insight": build_insight(p),
-        "rate_odds": p.get("rate_odds"),
+        "insight": build_insight(p, ev),
+        "rate_odds": ev["rate_odds"] if ev["rate_odds"].get("outcomes") else p.get("rate_odds"),
+        "calendar": {k: ev[k] for k in ("upcoming", "past", "fomc_path", "note", "now_kst")},
         "concentration": slim_concentration(p.get("concentration")),
         "movers": movers(p),
         "groups": [
@@ -67,7 +86,6 @@ async def dashboard():
              "items": [slim_item(it, 30) for it in p["groups"].get(g, [])]}
             for g in GROUP_LABELS if p["groups"].get(g)
         ],
-        "events": p.get("events", []),
         "scenarios": p.get("scenarios", []),
         "institutions": [{k: i.get(k) for k in ("key", "label", "report_date", "total_value_usd",
                                                 "n_positions")} | {"top": i.get("top", [])[:5]}
