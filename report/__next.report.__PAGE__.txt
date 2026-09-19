@@ -1,0 +1,31 @@
+1:"$Sreact.fragment"
+2:I[6368,["/_next/static/chunks/07_v8bux56rd3.js","/_next/static/chunks/03_vg7hbb0ryx.js"],"default"]
+3:I[22016,["/_next/static/chunks/07_v8bux56rd3.js","/_next/static/chunks/03_vg7hbb0ryx.js"],""]
+4:I[97367,["/_next/static/chunks/07_v8bux56rd3.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[97367,["/_next/static/chunks/07_v8bux56rd3.js"],"ViewportBoundary"]
+a:I[97367,["/_next/static/chunks/07_v8bux56rd3.js"],"MetadataBoundary"]
+8:X
+16:X
+16:C
+0:{"buildId":"GJ_k7ywVqUNpQrpaz8VK_","data":[{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto max-w-3xl space-y-5","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"NewsArticle\",\"headline\":\"경제 안정성 74.0점(안정) - 가장 취약한 축은 시장 밸류에이션\",\"datePublished\":\"2026-09-18\",\"dateModified\":\"2026-09-18\",\"inLanguage\":\"ko-KR\",\"author\":{\"@type\":\"Organization\",\"name\":\"글로벌 경제 관제실\"}}"}}],["$","header",null,{"children":[["$","p",null,{"className":"text-sm font-medium text-brand-700","children":"오늘의 거시경제 브리핑"}],["$","h1",null,{"className":"mt-1 text-2xl font-bold leading-snug tracking-tight","children":"경제 안정성 74.0점(안정) - 가장 취약한 축은 시장 밸류에이션"}],["$","p",null,{"className":"mt-2 text-sm text-slate-500","children":["기준 ","2026. 9. 19. 08:49 (KST)"]}]]}],["$","div",null,{"className":"card prose-ko p-6 text-[15.5px]","children":[["$","p","0",{"children":"7개 거시 축을 0~100점으로 환산한 경제 안정성 점수는 74.0점으로 '안정' 구간입니다. 가장 견조한 축은 금융여건 100점, 가장 취약한 축은 시장 밸류에이션 3점입니다. 50점 미만 축이 하나뿐이어서 경기 자체보다는 특정 부문의 부담이 점수를 끌어내리는 구조입니다."}],["$","p","1",{"children":"S&P 500 은 전일 대비 +0.17%(보합), 1개월 -0.54%, 연초 대비 +11.76% 입니다. 나스닥 종합은 전일 대비 +0.39% 입니다. 코스피는 전일 대비 -0.04%, 연초 대비 +59.35% 입니다. VIX 는 14.8로 평온 구간입니다."}]]}],["$","$L2",null,{"variant":"inArticle"}],["$","div",null,{"className":"card prose-ko p-6 text-[15.5px]","children":[[["$","p","0",{"children":"연방기금 실효금리는 3.88%, 미 10년물은 4.94%, 10년-3개월 금리차는 +0.87%p 입니다. 연방기금 선물 가격 기준으로 다음 FOMC(다음 FOMC 2026-10-28)에서 '동결' 가능성이 94%로 가장 높게 반영되어 있습니다(CME FedWatch 공식 수치가 아닌 자체 환산치)."}],["$","p","1",{"children":"환율·원자재는 원/달러 환율 1,386.0원(1주 +2.80%), 금 4,415.9달러(1개월 -0.11%), WTI 95.47달러(1개월 +12.40%) 입니다."}],["$","p","2",{"children":"S&P 500 시총가중과 동일가중의 12개월 수익률 격차는 +2.2%p(역사적 백분위 62%)이며, 최근 3개월 -4.1%p 변해 '축소 전환' 흐름입니다."}]],["$","ul",null,{"className":"mt-4 space-y-1.5 border-t border-slate-100 pt-4 text-sm text-slate-700","children":[["$","li","0",{"children":["✓ ","전일 상승 상위 : 비트코인 +5.86%, TIGER 200 IT +4.00%, KODEX IT +2.86%"]}],["$","li","1",{"children":["✓ ","전일 하락 상위 : WTI 원유 -6.32%, 브렌트유 -5.77%, 유틸리티 -1.42%"]}],["$","li","2",{"children":["✓ ","취약 축 : 시장 밸류에이션 (CAPE) 3점 - 실러 CAPE 40.9 - 경기 지표가 아니라 시장이 감당하는 위험의 크기 (Sep 18, 2026)"]}]]}]]}],["$","p",null,{"className":"text-xs text-slate-500","children":"공개 지표를 정해진 규칙으로 문장화한 자동 해설입니다. 투자 권유가 아니며 미래를 예측하지 않습니다."}],["$","$L3",null,{"href":"/","className":"inline-block text-sm font-medium text-brand-700 hover:underline","children":"대시보드로 이동"}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/03_vg7hbb0ryx.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#2563eb"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"2026-09-18 거시경제 브리핑 - 경제 안정성 74.0점(안정) - 가장 취약한 축은 시장 밸류에이션 | 글로벌 경제 관제실"}],["$","meta","1",{"name":"description","content":"7개 거시 축을 0~100점으로 환산한 경제 안정성 점수는 74.0점으로 '안정' 구간입니다. 가장 견조한 축은 금융여건 100점, 가장 취약한 축은 시장 밸류에이션 3점입니다. 50점 미만 축이 하나뿐이어서 경기 자체보다는 특정 부문의 부담이 점수를 끌어내리는 구조입니다."}],["$","meta","2",{"name":"application-name","content":"글로벌 경제 관제실"}],["$","meta","3",{"name":"keywords","content":"거시경제 대시보드,장단기금리차,공포지수,VIX,원달러 환율,경기침체 확률,FOMC,실러 CAPE,주식 시황"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","link","5",{"rel":"canonical","href":"https://macro-desk-kr.pages.dev/report/"}],["$","meta","6",{"name":"naver-site-verification","content":"2ccaf5170c4c593bc68124a6eb14bfd142b16093"}],["$","meta","7",{"property":"og:title","content":"2026-09-18 거시경제 브리핑 - 경제 안정성 74.0점(안정) - 가장 취약한 축은 시장 밸류에이션"}],["$","meta","8",{"property":"og:description","content":"7개 거시 축을 0~100점으로 환산한 경제 안정성 점수는 74.0점으로 '안정' 구간입니다. 가장 견조한 축은 금융여건 100점, 가장 취약한 축은 시장 밸류에이션 3점입니다. 50점 미만 축이 하나뿐이어서 경기 자체보다는 특정 부문의 부담이 점수를 끌어내리는 구조입니다."}],"$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12"]}]}]}],null]}],"isPartial":"$@13","staleTime":"$8","varyParams":null},{"rsc":"$L14","isPartial":"$@15","staleTime":"$8","varyParams":"$16"}],"isUpgradeableISRFallback":false,"a":"$@17","rootVaryParams":null,"needsRuntimeRequest":"$@18"}
+19:I[27201,["/_next/static/chunks/07_v8bux56rd3.js"],"IconMark"]
+1a:I[39756,["/_next/static/chunks/07_v8bux56rd3.js"],"default"]
+1b:I[37457,["/_next/static/chunks/07_v8bux56rd3.js"],"default"]
+6:null
+b:["$","meta","9",{"property":"og:image","content":"https://macro-desk-kr.pages.dev/og.png"}]
+c:["$","meta","10",{"property":"og:type","content":"article"}]
+d:["$","meta","11",{"name":"twitter:card","content":"summary_large_image"}]
+e:["$","meta","12",{"name":"twitter:title","content":"글로벌 경제 관제실"}]
+f:["$","meta","13",{"name":"twitter:description","content":"금리·환율·물가·변동성·경기침체 확률을 한 화면에서 매일 확인하는 거시경제 대시보드"}]
+10:["$","meta","14",{"name":"twitter:image","content":"https://macro-desk-kr.pages.dev/og.png"}]
+11:["$","link","15",{"rel":"icon","href":"/icon.svg"}]
+12:["$","$L19","16",{}]
+14:["$","$1","c",{"children":[null,["$","$L1a",null,{"parallelRouterKey":"children","template":["$","$L1b",null,{}]}]]}]
+18:true
+8:300
+8:C
+17:0
+13:"$undefined"
+15:"$undefined"
+7:"$undefined"
