@@ -1,0 +1,1 @@
+# AdSense 승인 후 NEXT_PUBLIC_ADSENSE_CLIENT 설정 시 자동 생성
