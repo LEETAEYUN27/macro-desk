@@ -1,0 +1,11 @@
+User-Agent: *
+Allow: /
+
+User-Agent: Yeti
+Allow: /
+
+User-Agent: Mediapartners-Google
+Allow: /
+
+Host: https://macro-desk-kr.pages.dev
+Sitemap: https://macro-desk-kr.pages.dev/sitemap.xml
